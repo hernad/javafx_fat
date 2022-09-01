@@ -9,6 +9,8 @@
 
 
   <properties>
+
+    <py4j.version>0.10.9.7</py4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <javafx.version>17.0.1</javafx.version>
     <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
@@ -17,6 +19,11 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>net.sf.py4j</groupId>
+      <artifactId>py4j</artifactId>
+      <version>${py4j.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
@@ -58,7 +65,7 @@
             <configuration>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>Main</mainClass>
+                  <mainClass>EntryPoint</mainClass>
                 </transformer>
               </transformers>
             </configuration>
