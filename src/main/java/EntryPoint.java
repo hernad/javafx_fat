@@ -1,9 +1,27 @@
 import py4j.GatewayServer;
+import java.util.*;
 
 public class EntryPoint {
 
-    public static void run_gui(String[] args) {
-        HelloFX.main(args);
+    private Stack stack;
+
+    public EntryPoint() {
+      stack = new Stack();
+      stack.push("Initial Item");
+    }
+
+    public Stack getStack() {
+        String[] args = {};
+
+        HelloFX.main_startup(args);
+        return stack;
+    }
+
+    public Stack getStack2() {
+        String[] args = {};
+        stack.push("Later");
+        HelloFX.main_runlater(args);
+        return stack;
     }
 
     public static void main(String[] args) {
