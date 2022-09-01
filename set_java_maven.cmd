@@ -1,0 +1,1 @@
+set PATH=c:\dev\apache-maven-3.8.6\bin;C:\Program Files\Microsoft\jdk-17.0.4.101-hotspot\bin;%PATH%
